@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inconsolata", monospace;
+  color: #0d1e2d;
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
