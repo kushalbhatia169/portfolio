@@ -27,7 +27,7 @@ const Skills = (props) =>{
                         JavaScript is a high-level, interpreted programming language. It is a language which is also characterized 
                         as dynamic, weakly typed, prototype-based, and multi-paradigm.
                     </p>
-                    <ul class="list-unstyled list-line">
+                    <ul className="list-unstyled list-line">
                         <li>Created Responsive web design Using Modern Css Libraries like Bootstrap, Scss. </li>
                         <li>Used modern react design libraries Material UI, Antd.</li>
                         <li>Used modern react concept like hooks, lazy loading, router hooks.</li>
@@ -43,7 +43,7 @@ const Skills = (props) =>{
                         I have more than 2 years experience in building web applications using React, Redux, Node.js, Express.js,
                         MongoDB, and Mongoose.
                     </p>
-                    <ul class="list-unstyled list-line">
+                    <ul className="list-unstyled list-line">
                         <li>Created Responsive web design Using Modern Css Libraries like Bootstrap, Scss. </li>
                         <li>Used modern react design libraries Material UI, Antd.</li>
                         <li>Used modern react concept like hooks, lazy loading, router hooks.</li>
@@ -60,7 +60,7 @@ const Skills = (props) =>{
                         event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' 
                         package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
                     </p>
-                    <ul class="list-unstyled list-line">
+                    <ul className="list-unstyled list-line">
                         <li>Created Responsive web design Using Modern Css Libraries like Bootstrap, Scss. </li>
                         <li>Used modern react design libraries Material UI, Antd.</li>
                         <li>Used modern react concept like hooks, lazy loading, router hooks.</li>
@@ -76,7 +76,7 @@ const Skills = (props) =>{
                         MongoDB is a cross-platform document-oriented database program. Classified as a 
                         NoSQL database,
                     </p>
-                    <ul class="list-unstyled list-line">
+                    <ul className="list-unstyled list-line">
                         <li>Created Responsive web design Using Modern Css Libraries like Bootstrap, Scss. </li>
                         <li>Used modern react design libraries Material UI, Antd.</li>
                         <li>Used modern react concept like hooks, lazy loading, router hooks.</li>
@@ -94,7 +94,7 @@ const Skills = (props) =>{
                     <p>
                         
                     </p>
-                    <ul class="list-unstyled list-line">
+                    <ul className="list-unstyled list-line">
                         <li>Created Responsive web design Using Modern Css Libraries like Bootstrap, Scss. </li>
                         <li>Used modern react design libraries Material UI, Antd.</li>
                         <li>Used modern react concept like hooks, lazy loading, router hooks.</li>

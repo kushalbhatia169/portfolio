@@ -2,13 +2,17 @@ import React, {useState} from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Box } from '@mui/material';
 import Skills from './skills';
-import Blogs from './blogs';
-import Projects from './work';
-import Contact from './contact';
+import Slider from './slider';
 import styles from './home.module.scss';
-// import { Footer } from 'antd/lib/layout/layout';
+import { Footer } from 'antd/lib/layout/layout';
+import { FaFacebook, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import  skills from '../../public/images/skills.png';
+import  work from '../../public/images/work.png';
+import blogs from '../../public/images/blogs.jpg';
+import contact from '../../public/images/contacts.png';
+import Image from 'next/image';
 
-const Home = (props)=> {
+const Home = ()=> {
     const [isSelected, setIsSelected] = useState('All');
     const setSelectedClass = (selected) => {
         switch (selected) {
@@ -55,31 +59,35 @@ const Home = (props)=> {
             </Box>
             <Box className="d-flex flex-wrap ms-3">
                 {(isSelected === 'All' || isSelected === 'Skills') && 
-                <Img {...{height:300, width:350, classes:'ms-5', alt:"Skills" }}>
-                    https://exaud.com/wp-content/uploads/2020/09/software-skills.png
+                <Img {...{height:300, width:410, classes:'ms-5', alt:"Skills" }}>
+                   {skills}
                 </Img>}
                 {(isSelected === 'All' || isSelected === 'Work') &&
-                    <Img {...{height:300, width:350, classes:'ms-5', alt:"Work" }}>
-                    https://analyticsindiamag.com/wp-content/uploads/2020/01/top-10-DS-projects.png
+                    <Img {...{height:300, width:410, classes:'ms-5', alt:"Work" }}>
+                    {work}
                 </Img>}
                 {(isSelected === 'All' || isSelected === 'Blogs') && 
-                <Img {...{height:300, width:350, classes:'ms-5', alt:"Blogs" }}>
-                    https://www.bbvaapimarket.com/wp-content/uploads/2018/04/blogsapis.jpg
+                <Img {...{height:300, width:410, classes:'ms-5', alt:"Blogs" }}>
+                    {blogs}
                 </Img>}
                 {(isSelected === 'All' || isSelected === 'Contact') && 
-                <Img {...{height:300, width:350, classes:'ms-5', alt:"Contact" }}>
-                    https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKuDi4mifr_3aJZVocr8b58au-uAO0cnWLEg&usqp=CAU
+                <Img {...{height:300, width:410, classes:'ms-5', alt:"Contact" }}>
+                    {contact}
                 </Img>}
             </Box>
             <Skills/>
-            <Blogs/>
-            <Projects/>
-            <Contact/>
-            {/* <Footer>
-                <p>
+            <Slider/>
+            <Footer className='p-5 d-flex justify-content-between flex-wrap'>
+                <Box className="ps-5">
                     © Copyright MyPortfolio. All Rights Reserved
-                </p>
-            </Footer> */}
+                </Box>
+                <Box className='d-flex flex-wrap justify-content-evenly me-4'>
+                    <a className="ms-2 me-2" href="https://www.facebook.com/kushalbhatia169"><FaFacebook size={30} className='cursor-pointer'/></a>
+                    <a className="ms-2 me-2" href='https://twitter.com/ku_bhatia'><FaTwitter size={30} className='cursor-pointer'/></a>
+                    <a className="ms-2 me-2" href='https://www.linkedin.com/in/kushal-bhatia-28061996/'><FaLinkedinIn size={30} className='cursor-pointer'/></a>
+                    <a className="ms-2 me-2" href='https://github.com/kushalbhatia169'><FaGithub size={30} className='cursor-pointer'/></a>
+                </Box>
+            </Footer>
         </Box>
     );
 }
@@ -94,17 +102,13 @@ const HeadingContent = ({isSelected, children, setSelectedClass}) => {
 }
 
 const Img = ({height, width, children, classes, alt }) => {
-    const stylesProps = {
-        height,
-        width
-    };
     //[showDiv, setShowDiv] = useState(false);
     return <Box className="d-flex flex-wrap">
         <Box className= {`${styles.div_hover_class} d-flex justify-content-center 
         align-items-center position-absolute ms-5 ${alt===styles.Contact && 'mt-5'}`}>
             <h3 className="">{alt}</h3>
         </Box>
-        <img src={children} alt={alt} className={classes} style={{...stylesProps}}/>
+        <Image src={children} alt={alt} className={classes} height={height} width={width}/>
     </Box>
 }
 export default Home;

@@ -102,3 +102,80 @@
         }
     }
 }
+
+.work_main {
+    .carousel {
+        overflow: hidden;
+        //padding: 50px 50px 50px 50px;
+        max-width: 90%;
+        margin: 50px;
+        transition: ease-in;
+    }
+
+    .inner {
+        white-space: nowrap;
+        transition: transform 1s;
+    }
+
+    .carousel_item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        background-color: #eceff2;
+        color: black;
+    }
+
+    .indicators {
+        display: flex;
+        justify-content: center;
+        background-color: #eceff2;
+        padding: 10px;
+        padding-bottom: 25px;
+
+        button {
+            background-color: rgba(13, 30, 45, 0.3);
+            border: none;
+            outline: none;
+            padding: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+
+    // .indicators>button {
+    //     margin: 5px;
+    // }
+
+    .indicators>button.active {
+        background-color: rgba(13, 30, 45, 0.6);
+        color: #fff;
+    }
+
+    // .carousel_button {
+    //     position: absolute;
+    //     //top: 50%;
+    //     transform: translateY(-50%);
+    //     z-index: 1;
+    //     width: 20px;
+    //     height: 20px;
+    //     border-radius: 50%;
+    //     background-color: #fff;
+    //     color: #000;
+    //     font-size: 30px;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     cursor: pointer;
+    //     transition: 0.3s;
+    //     border: 1px solid #000;
+    //     outline: none;
+    // }
+}
