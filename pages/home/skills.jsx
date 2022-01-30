@@ -3,20 +3,21 @@ import {Box} from '@mui/material';
 import { FaReact, FaJs, FaNode, FaDatabase, FaGit, FaSass, FaJira, FaBitbucket } from "react-icons/fa";
 import styles from './home.module.scss';
 
-const Skills = (props) =>{
+const Skills = (props) => {
+    const { skillsData, here, context } = props;
+    const {heading, about} = skillsData;
+    
     return (
         <Box className={styles.skills_main}>
             <Box className="d-flex flex-column align-items-center flex-wrap">
                 <style jsx>{`
                     h3 {
-                        margin-top: 250px;
+                        margin-top: 50px;
                     }
                 `}</style>
-                <h3>Skills</h3>
-            <p className="w-50">React Developer with hands-on experience in identifying web-based user interactions along 
-                with designing.Also worked on modern day styling tools like SAAS/Bootstrap to created highly usable CSS codes. Created api’s in 
-                node js using express js and also implemented middlware to authorize api's. created model and controllers using mongoDB and mongoose also Proficient 
-                with Git concepts. 
+                <h3>{heading}</h3>
+            <p className="w-50">
+                {about}
             </p>
             </Box>
             <Box className='d-flex flex-wrap justify-content-evenly'>

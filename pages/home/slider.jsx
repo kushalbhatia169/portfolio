@@ -1,54 +1,53 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { useSwipeable } from "react-swipeable";
-import work from "./home.module.scss";
+import slider from "./home.module.scss";
 import { FaAward, FaDev, FaMoneyBill } from "react-icons/fa";
 
 const Slider = () =>{
 
     return (
-        <div className={work.work_main + ' ms-5'}>
-            <Carousel>
-                <CarouselItem>
-                    <div className='d-flex flex-column flex-wrap justify-content-center'>
-                        <div className='d-flex flex-wrap justify-content-center'>
-                            <FaMoneyBill size={70}/>
-                        </div>
-                        <h5 className="mt-5">
-                            Got an out of turn promotion from HR Department of JKTECH for contribution in Project.
-                        </h5> 
-                    </div>
-                </CarouselItem>
-                <CarouselItem>
-                    <div className='d-flex flex-column flex-wrap justify-content-center'>
-                        <div className='d-flex flex-wrap justify-content-center'>
-                            <FaDev size={70}/>
-                        </div>
-                        <h5 className="mt-5">
-                            Created website using MERN stack. Available for full stack developer also.
-                        </h5> 
-                    </div>
-                </CarouselItem>
-                <CarouselItem>
-                    <div className='d-flex flex-column flex-wrap justify-content-center'>
-                        <div className='d-flex flex-wrap justify-content-center'>
-                            <FaAward size={70}/>
-                        </div>
-                        <h5 className="mt-5">
-                            Got an award from hr for contributing to the project in JKTECH.
-                        </h5> 
-                    </div>
-                </CarouselItem>
-            </Carousel>
+        <div className={slider.slider_main + ' ms-5'}>
+          <Carousel>
+            <CarouselItem>
+              <div className='d-flex flex-column flex-wrap justify-content-center'>
+                <div className='d-flex flex-wrap justify-content-center'>
+                  <FaMoneyBill size={70}/>
+                </div>
+                <h5 className={`mt-5  ${slider.slider_main__text}`}>
+                  Got an out of turn promotion from HR Department of JKTECH for contribution in Project.
+                </h5> 
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className='d-flex flex-column flex-wrap justify-content-center'>
+                <div className='d-flex flex-wrap justify-content-center'>
+                  <FaDev size={70}/>
+                </div>
+                <h5 className={`mt-5  ${slider.slider_main__text}`}>
+                  Created website using MERN stack. Available for full stack development also.
+                </h5> 
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className='d-flex flex-column flex-wrap justify-content-center'>
+                <div className='d-flex flex-wrap justify-content-center'>
+                  <FaAward size={70}/>
+                </div>
+                <h5 className={`mt-5  ${slider.slider_main__text}`}>
+                  Got an award from hr for contributing to the project in JKTECH.
+                </h5> 
+              </div>
+            </CarouselItem>
+          </Carousel>
         </div>
     );
 }
 
 const CarouselItem = ({ children, width }) => {
     return (
-        <div className={work.carousel_item} style={{ width: width }}>
-            {children}
-        </div>
+      <div className={slider.carousel_item} style={{ width: width }}>
+        {children}
+      </div>
     );
 };
 
@@ -89,23 +88,23 @@ const Carousel = ({ children }) => {
     return (
       <div
         {...handlers}
-        className={work.carousel + ' ms-5 mt-4'}
+        className={slider.carousel + ' ms-5 mt-4'}
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
         <div
-          className={work.inner}
+          className={slider.inner}
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {React.Children.map(children, (child, index) => {
             return React.cloneElement(child, { width: "100%" });
           })}
         </div>
-        <div className={work.indicators}>
+        <div className={slider.indicators}>
           {React.Children.map(children, (child, index) => {
             return (
               <button
-                className={`${work.carousel_button} ${index === activeIndex ? work.active : null}`}
+                className={`${slider.carousel_button} ${index === activeIndex ? slider.active : null}`}
                 onClick={() => {
                   updateIndex(index);
                 }}

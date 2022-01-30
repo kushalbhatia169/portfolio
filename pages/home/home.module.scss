@@ -1,4 +1,4 @@
-.dashboard_main {
+.home_main {
     $self: &;
 
     .border_Down {
@@ -7,7 +7,7 @@
 
     .div_hover_class {
         $self: &;
-        height: 300px;
+        height: 240px;
         width: 350px;
         z-index: 1;
         // background: rgba(0, 0, 0, 0.4);
@@ -60,12 +60,6 @@
             }
         }
     }
-
-    // img {
-    //     ::after {
-    //         background-color: dimgray;
-    //     }
-    // }
 }
 
 @keyframes slideInFromLeft {
@@ -97,13 +91,14 @@
                 width: 10px;
                 height: 3px;
                 background: #000;
-                ;
             }
         }
     }
 }
 
-.work_main {
+.slider_main {
+    $self: &;
+
     .carousel {
         overflow: hidden;
         //padding: 50px 50px 50px 50px;
@@ -121,7 +116,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        height: 500px;
+        height: 300px;
         background-color: #eceff2;
         color: black;
     }
@@ -159,23 +154,7 @@
         color: #fff;
     }
 
-    // .carousel_button {
-    //     position: absolute;
-    //     //top: 50%;
-    //     transform: translateY(-50%);
-    //     z-index: 1;
-    //     width: 20px;
-    //     height: 20px;
-    //     border-radius: 50%;
-    //     background-color: #fff;
-    //     color: #000;
-    //     font-size: 30px;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     cursor: pointer;
-    //     transition: 0.3s;
-    //     border: 1px solid #000;
-    //     outline: none;
-    // }
+    &__text {
+        font-size: 1rem;
+    }
 }
