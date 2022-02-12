@@ -1,0 +1,23 @@
+.skills_main {
+  scroll-behavior: smooth;
+
+  ul {
+    margin: 0;
+
+    li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 30px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7rem;
+        width: 10px;
+        height: 3px;
+        background: #000;
+      }
+    }
+  }
+}

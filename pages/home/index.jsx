@@ -1,12 +1,9 @@
 import React, {useState} from 'react';
 import Router from 'next/router';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Box } from '@mui/material';
 import Skills from './skills';
 import Slider from './slider';
 import styles from './home.module.scss';
-import { Footer } from 'antd/lib/layout/layout';
-import { FaFacebook, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import  skills from '../../public/images/skills.png';
 import  work from '../../public/images/work.png';
 import blogs from '../../public/images/blogs.jpg';
@@ -86,17 +83,6 @@ const Home = (props)=> {
                 </Box>
                 <Skills {...{...props}}/>
                 <Slider/>
-                <Footer className='p-5 d-flex justify-content-between flex-wrap'>
-                    <Box className="ps-5">
-                        © Copyright MyPortfolio. All Rights Reserved
-                    </Box>
-                    <Box className='d-flex flex-wrap justify-content-evenly me-4'>
-                        <a className="ms-2 me-2" href="https://www.facebook.com/kushalbhatia169"><FaFacebook size={30} className='cursor-pointer'/></a>
-                        <a className="ms-2 me-2" href='https://twitter.com/ku_bhatia'><FaTwitter size={30} className='cursor-pointer'/></a>
-                        <a className="ms-2 me-2" href='https://www.linkedin.com/in/kushal-bhatia-28061996/'><FaLinkedinIn size={30} className='cursor-pointer'/></a>
-                        <a className="ms-2 me-2" href='https://github.com/kushalbhatia169'><FaGithub size={30} className='cursor-pointer'/></a>
-                    </Box>
-                </Footer>
             </Box>
         </Layout>
     );
