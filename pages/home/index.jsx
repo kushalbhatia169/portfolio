@@ -48,7 +48,7 @@ const Home = (props)=> {
         }
     }
     return (
-        <Layout>
+        <Layout page="first">
             <Box className={styles.home_main}>
                 <Box className="d-flex m-4 p-4 justify-content-between ms-5">
                     <Box className="d-flex flex-column">

@@ -5,12 +5,12 @@ import styles from './layout.module.scss';
 import { Footer } from 'antd/lib/layout/layout';
 import { FaFacebook, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
-const Layout = ({children}) => { 
+const Layout = ({children, page}) => { 
 
     return (
         <Box className={styles.layout_main} style={{minHeight:1000}}>
             <Box className="d-flex m-4 p-4 justify-content-between">
-                <h4>Welcome to My Portfolio...</h4>
+                <h4>{(page === 'first' && 'Welcome to My Portfolio...') || 'My Portfolio...'}</h4>
                 <MenuIcon fontSize="large" className="cursor-pointer"/>
             </Box>
             {children}

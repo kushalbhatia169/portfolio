@@ -2,7 +2,7 @@
     title: Skills of Kushal
     Author: Kushal Bhatia
     heading: Skills
-    about: React Developer with hands-on experience in identifying web-based user interactions along with   their corresponding functionalities.,with designing.Also worked on modern day styling tools like SAAS   Bootstrap to created highly usable CSS codes. Created api’s in Node.js and Express.js to communicate with the backend., also implemented middlware to authorize api's. created model and controllers using mongoDB and mongoose., also profocient with Git concepts.
+    about: React Developer with hands-on experience in identifying web-based user interactions along with   their corresponding functionalities.,with designing.Also worked on modern day styling tools like Saas  Bootstrap to created highly usable CSS codes. Created api’s in Node.js and Express.js to communicate with the backend., also implemented middleware to authorize api's. created model and controllers using mongoDB and mongoose., also proficient with Git concepts.
     content: 
         - label: Java Script
           icon: '<FaReact size={40}/>'
@@ -24,7 +24,7 @@
             <li>react router dom for routing</li>
             <li>Used react-redux for state management.</li>
         - label: Node JS
-          heading: "Node JS is a JavsScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js package        ecosystem, npm, is the largest ecosystem of open source libraries in the world."
+          heading: "Node JS is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js package        ecosystem, npm, is the largest ecosystem of open source libraries in the world."
           listData: |
             <li>Created Responsive web design Using Modern Css Libraries like Bootstrap, Scss. </li>
             <li>Used modern react design libraries Material UI, Antd.</li>

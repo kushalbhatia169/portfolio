@@ -4,11 +4,18 @@ import Layout from '../../components/layout';
 import styles from './work.module.scss';
 import uhro_logo from '../../public/images/unicorn_logo.png';
 import Link from 'next/link';
+import { Pagination } from 'antd';
+
+type clickPagination = (total: number) => unknown;
 
 const work = () => {
 
+    function showTotal(total: clickPagination) {
+        return `Total ${total} items`;
+    }
+
     return (
-        <Layout>
+        <Layout page="">
             <div className={styles.work_main}>
                 <div className={'d-flex flex-wrap ms-5 mt-3 ' + styles.work_main__office}>
                     <div className={styles.work_main__UHRO}>
@@ -52,6 +59,9 @@ const work = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={'d-flex mt-4 mb-3 justify-content-center ' + styles.work_pagination}>
+                <Pagination size="small" total={50} responsive={true} simple={true} />
             </div>
         </Layout>
     );

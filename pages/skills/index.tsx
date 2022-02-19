@@ -40,7 +40,7 @@ const Skills: React.FC<Props> = (props) => {
     const { heading, about, content } = skillsData || {};
 
     return (
-        <Layout>
+        <Layout page="">
             <Box className={styles.skills_main}>
                 <Box className="d-flex flex-column align-items-center flex-wrap">
                     <style jsx>{`
