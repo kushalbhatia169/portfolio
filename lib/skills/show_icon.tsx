@@ -2,7 +2,7 @@
 import { FaReact, FaJs, FaNode, FaDatabase, FaGit, FaSass, FaBitbucket, FaSmile } from "react-icons/fa";
 
 
-export const showIcon = (section: String) => {
+export const showIcon = (section: String): JSX.Element => {
     switch (section) {
         case 'Java Script':
             return <FaJs size={40} />;
@@ -16,7 +16,7 @@ export const showIcon = (section: String) => {
             return (<div className='d-flex flex-wrap'>
                 <FaGit size={40} />
                 <b>-</b>
-                <FaBitbucket size={40} />;
+                <FaBitbucket size={40} />
             </div>)
         case 'Sass':
             return <FaSass size={40} />;

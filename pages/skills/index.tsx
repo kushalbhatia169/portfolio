@@ -15,19 +15,27 @@ export async function getStaticProps() {
     }
 };
 
-type contentProps = {
-    label: String,
-    heading: String,
-    listData: String,
+interface contentProps {
+    content: {
+        label: String,
+        heading: String,
+        listData: String,
+    }[]
 };
-interface SkillsProps {
+
+interface SkillsProps extends contentProps {
     heading: String,
     about: String,
-    content: contentProps[],
+    // content: contentProps[],
     // content: Array<contentProps>,
 };
 
-const Skills = (props: { skillsData: SkillsProps }) => {
+interface Props {
+    skillsData: SkillsProps
+}
+
+const Skills: React.FC<Props> = (props) => {
+
     const { skillsData } = props;
     const { heading, about, content } = skillsData || {};
 
@@ -66,7 +74,3 @@ const Skills = (props: { skillsData: SkillsProps }) => {
 }
 
 export default Skills;
-
-function item(item: any): React.ReactNode {
-    throw new Error('Function not implemented.');
-}
