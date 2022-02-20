@@ -2,66 +2,88 @@ import Image from 'next/image';
 import React from 'react'
 import Layout from '../../components/layout';
 import styles from './work.module.scss';
-import uhro_logo from '../../public/images/unicorn_logo.png';
+// import uhro_logo from '../../public/images/unicorn_logo.png';
 import Link from 'next/link';
 import { Pagination } from 'antd';
+import { getWorkData } from '../../lib/work/work';
+import { showImage } from '../../lib/work/show_image';
+import ReactHtmlParser from 'react-html-parser';
 
-type clickPagination = (total: number) => unknown;
+export const getStaticProps = async () => {
+    const workData = await getWorkData();
+    return {
+        props: {
+            workData: workData[0],
+        }
+    }
+};
 
-const work = () => {
+interface contentProps {
+    project_name: String,
+    project_desc: String,
+    product: String
+    image: String,
+    role: String,
+    work_done: String,
+    responsibility: String,
+    link: string,
+}
+interface workProps {
+    workData: {
+        content: contentProps[],
+    }
+}
 
-    function showTotal(total: clickPagination) {
-        return `Total ${total} items`;
+const work: React.FC<workProps> = (props) => {
+    const [currentPage, setCurrentPage] = React.useState(0);
+    const [content] = React.useState(props?.workData?.content);
+    const [totalPage] = React.useState(content?.length);
+    const changeProject = (e: React.SyntheticEvent): void => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        setCurrentPage(Number(e) - 1);
     }
 
     return (
         <Layout page="">
             <div className={styles.work_main}>
-                <div className={'d-flex flex-wrap ms-5 mt-3 ' + styles.work_main__office}>
+                {content && <div className={'d-flex flex-wrap ms-5 mt-3 ' + styles.work_main__office}>
                     <div className={styles.work_main__UHRO}>
-                        <h2>Unicorn Hro</h2>
+                        <h2>{content[currentPage]?.project_name}</h2>
                         <p className='w-50 mt-2'>
-                            A proprietary and fully integrated cloud-based solution,
-                            UHRO automates and simplifies human capital management workflow processes,
-                            from hiring, onboarding, and administration through separation.
+                            {content[currentPage]?.project_desc}
                         </p>
                         <div className='d-flex flex-wrap mt-4'>
                             <div className={"d-flex justify-content-center align-items-center " + styles.work_main__image} >
-                                <Image src={uhro_logo} alt="uhro_logo" />
+                                <Image src={showImage(content[currentPage]?.image)} alt="uhro_logo" />
                             </div>
                             <div className='w-25 ms-4'>
-                                <p className={styles.work_main__product}>Employee Self Service</p>
+                                <p className={styles.work_main__product}>
+                                    {content[currentPage]?.product}
+                                </p>
                                 <p className={styles.work_main__role}>
-                                    Front-End Development <br></br>
-                                    Back-End Development <br></br>
-                                    Git Deployments <br></br>
+                                    {ReactHtmlParser(content[currentPage]?.role)}
                                 </p>
                                 <p className='mt-3'>
-                                    Requirement gathering, React JS Developer (created UI of webpage as well), Created API’s in
-                                    Node JS/Express JS, Work on POC related task, Synced All the repository data in server, troubleshooting,
-                                    Help other developer/tester if they are facing any blocker.
+                                    {content[currentPage]?.work_done}
                                 </p>
                                 <h3 className={"mt-4 mb-3 " + styles.work_main__wid}>What I did</h3>
                                 <ul className="list-unstyled list-line mb-4">
-                                    <li>Design in ‘Sass’</li>
-                                    <li>React JS</li>
-                                    <li>Redux</li>
-                                    <li>Node JS</li>
-                                    <li>API integration</li>
-                                    <li>Github Deployments</li>
-                                    <li>Code Synchronization</li>
+                                    {ReactHtmlParser(content[currentPage]?.responsibility)}
                                 </ul>
                                 <br></br>
-                                <Link href="https://stgemp2.unicornhro.com" passHref={true} >
-                                    <a target="_blank" className={"mt-5 " + styles.work_main__link}>VISIT WEBSITE</a>
-                                </Link>
+                                {content[currentPage]?.link !== 'N/A' && <Link href={content[currentPage]?.link} passHref={true}>
+                                    <a target="_blank" className={"mt-5 " + styles.work_main__link}>
+                                        VISIT WEBSITE
+                                    </a>
+                                </Link>}
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>}
             </div>
             <div className={'d-flex mt-4 mb-3 justify-content-center ' + styles.work_pagination}>
-                <Pagination size="small" total={50} responsive={true} simple={true} />
+                <Pagination size="small" total={4} responsive={true} simple={true}
+                    defaultPageSize={1} onChange={changeProject} />
             </div>
         </Layout>
     );
