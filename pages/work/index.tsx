@@ -38,7 +38,7 @@ const work: React.FC<workProps> = (props) => {
     const [currentPage, setCurrentPage] = React.useState(0);
     const [content] = React.useState(props?.workData?.content);
     const [totalPage] = React.useState(content?.length);
-    const changeProject = (e: React.SyntheticEvent): void => {
+    const changeProject = (e: number): void => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         setCurrentPage(Number(e) - 1);
     }
