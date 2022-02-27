@@ -26,8 +26,8 @@ function Skills(props) {
         </p>
       </Box>
       <Box className="d-flex flex-wrap justify-content-evenly">
-        {content.map((item) => {
-          const { label, heading: heading_item, listData } = item;
+        {content?.map((item) => {
+          const { label, heading: heading_item, listData } = item || {};
           return (
             <Box className="d-flex flex-column flex-wrap ms-5 w-25 mt-3">
               {label && showIcon(label)}
