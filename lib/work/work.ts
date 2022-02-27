@@ -13,7 +13,7 @@ export const getWorkData = async () => {
     const fileNames: string[] = fs.readdirSync(workDirectory);
     const workData: workDataContent[] = fileNames.map(fileName => {
         // Remove ".md" from file name to get id
-        const id: string = fileName.replace(/\.md$/, '')
+        const id: string = fileName.replace(/\.md$/, '');
 
         // Read markdown file as string
         const fullPath: string = path.join(workDirectory, fileName);
