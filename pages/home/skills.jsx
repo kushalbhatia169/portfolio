@@ -5,10 +5,10 @@ import styles from './home.module.scss';
 import { showIcon } from '../../lib/skills/show_icon';
 
 function Skills(props) {
-  const { skillsData } = props;
+  const { skillsData } = props || {};
   const {
     heading, about, content,
-  } = skillsData;
+  } = skillsData || {};
 
   return (
     <Box className={styles.skills_main}>

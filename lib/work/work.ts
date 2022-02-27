@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const workDirectory: string = path.join(process.cwd(), 'data', 'Work');
+const workDirectory: string = path.join(process.cwd(), 'data', 'work');
 
 type workDataContent = {
     id: string

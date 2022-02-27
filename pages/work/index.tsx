@@ -19,25 +19,25 @@ export const getStaticProps = async () => {
 };
 
 interface contentProps {
-    project_name: string,
-    project_desc: string,
-    product: string
-    image: string,
-    role: string,
-    work_done: string,
-    responsibility: string,
-    link: string,
+  project_name: string,
+  project_desc: string,
+  product: string
+  image: string,
+  role: string,
+  work_done: string,
+  responsibility: string,
+  link: string,
 }
 interface workProps {
-    workData: {
-        content: contentProps[],
-    }
+  workData: {
+    content: contentProps[],
+  }
 }
 
 const work: React.FC<workProps> = (props) => {
   const [currentPage, setCurrentPage] = React.useState(0);
   const [content] = React.useState(props?.workData?.content);
-  const [totalPage] = React.useState(content?.length);
+  // const [totalPage] = React.useState(content?.length);
   const changeProject = (e: number): void => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     setCurrentPage(Number(e) - 1);
@@ -73,7 +73,7 @@ const work: React.FC<workProps> = (props) => {
                 <br></br>
                 {content[currentPage]?.link !== 'N/A' && <Link href={content[currentPage]?.link} passHref={true}>
                   <a target="_blank" className={'mt-5 ' + styles.work_main__link}>
-                                        VISIT WEBSITE
+                    VISIT WEBSITE
                   </a>
                 </Link>}
               </div>
