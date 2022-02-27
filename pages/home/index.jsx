@@ -10,7 +10,7 @@ import work from '../../public/images/work.png';
 import blogs from '../../public/images/blogs.jpg';
 import contact from '../../public/images/contacts.png';
 import Layout from '../../components/layout';
-import { getSkillsData } from '../../lib/skills/skills.ts';
+import { getSkillsData } from '../../lib/skills/skills';
 
 export async function getStaticProps() {
   const skillsData = await getSkillsData();

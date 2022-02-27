@@ -31,6 +31,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/react-html-parser": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",

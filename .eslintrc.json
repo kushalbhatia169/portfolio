@@ -20,7 +20,8 @@
     "ecmaVersion": 2018,
     "babelOptions": {
       "presets": [
-        "@babel/preset-react"
+        "@babel/preset-react",
+        "@babel/preset-typescript"
       ]
     },
     "project": "./tsconfig.eslint.json",
@@ -144,6 +145,16 @@
           ".ts",
           ".tsx"
         ]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
       }
     ],
     "semi": [

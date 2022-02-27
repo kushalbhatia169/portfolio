@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import ReactHtmlParser from 'react-html-parser';
 import styles from './home.module.scss';
-import { showIcon } from '../../lib/skills/show_icon.tsx';
+import { showIcon } from '../../lib/skills/show_icon';
 
 function Skills(props) {
   const { skillsData } = props;

@@ -3,4 +3,3 @@
 **/.next/*
 *.scss
 .eslintrc.js
-*.tsx

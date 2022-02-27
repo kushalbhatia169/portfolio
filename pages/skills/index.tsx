@@ -1,36 +1,36 @@
-import React from 'react'
-import Layout from '../../components/layout';
+import React from 'react';
 import { Box } from '@mui/material';
 import ReactHtmlParser from 'react-html-parser';
-import styles from './skills.module.scss';
+import Layout from '../../components/layout';
 import { getSkillsData } from '../../lib/skills/skills';
 import { showIcon } from '../../lib/skills/show_icon';
+import styles from './skills.module.scss';
 
 export async function getStaticProps() {
     const skillsData = await getSkillsData();
     return {
         props: {
             skillsData: skillsData[0],
-        }
-    }
-};
+        },
+    };
+}
 
-interface contentProps {
+type contentProps = {
     content: {
         label: string,
         heading: string,
         listData: string,
-    }[]
-};
+    }[],
+}
 
-interface SkillsProps extends contentProps {
+type SkillsProps = contentProps & {
     heading: string,
     about: string,
     // content: contentProps[],
     // content: Array<contentProps>,
-};
+}
 
-interface Props {
+type Props = {
     skillsData: SkillsProps
 }
 
