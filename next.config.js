@@ -1,3 +1,23 @@
+const LiveReloadPlugin = require('webpack-livereload-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
+
 module.exports = {
-  reactStrictMode: true,
+  future: {
+    webpack5: true
+  },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    if (dev) config.plugins.push(
+      new LiveReloadPlugin({
+        port: 2999,
+        hostname: 'localhost'
+      }),
+
+      new ESLintPlugin({
+        extensions: ['ts', 'tsx'],
+        failOnError: true
+      })
+    )
+
+    return config
+  }
 }

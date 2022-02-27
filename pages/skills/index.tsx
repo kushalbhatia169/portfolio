@@ -15,7 +15,7 @@ export async function getStaticProps() {
     };
 }
 
-type contentProps = {
+interface contentProps {
     content: {
         label: string,
         heading: string,
@@ -23,14 +23,14 @@ type contentProps = {
     }[],
 }
 
-type SkillsProps = contentProps & {
+interface SkillsProps extends contentProps {
     heading: string,
     about: string,
     // content: contentProps[],
     // content: Array<contentProps>,
 }
 
-type Props = {
+interface Props {
     skillsData: SkillsProps
 }
 

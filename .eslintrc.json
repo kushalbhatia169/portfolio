@@ -1,14 +1,11 @@
 {
   "root": true,
   "parser": "@babel/eslint-parser",
+  // "parser": "@typescript-eslint/parser",
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended",
-    "airbnb"
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "env": {
     "browser": true,
@@ -32,8 +29,12 @@
       "experimentalObjectRestSpread": true
     }
   },
-  "plugins": [],
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
     "array-bracket-spacing": "warn",
     "arrow-spacing": "warn",
     "block-spacing": "warn",
@@ -124,6 +125,8 @@
         "when": "never"
       }
     ],
+    "react-hooks/rules-of-hooks": 0,
+    "react/jsx-key": 0,
     "react/jsx-curly-brace-presence": "warn",
     "react/jsx-tag-spacing": [
       "warn",
