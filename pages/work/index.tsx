@@ -19,13 +19,13 @@ export const getStaticProps = async () => {
 };
 
 interface contentProps {
-    project_name: String,
-    project_desc: String,
-    product: String
-    image: String,
-    role: String,
-    work_done: String,
-    responsibility: String,
+    project_name: string,
+    project_desc: string,
+    product: string
+    image: string,
+    role: string,
+    work_done: string,
+    responsibility: string,
     link: string,
 }
 interface workProps {
