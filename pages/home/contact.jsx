@@ -1,11 +1,9 @@
 import React from 'react';
 
-function Contact(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+function Contact() {
+  return (
+    <div />
+  );
 }
 
 export default Contact;

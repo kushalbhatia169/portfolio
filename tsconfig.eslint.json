@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "babel.config.js"
+  ],
+  "rules": [
+    {
+      "no-reserved-keys": 0
+    }
+  ]
+}

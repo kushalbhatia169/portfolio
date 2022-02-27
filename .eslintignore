@@ -1,3 +1,6 @@
 **/node_modules/*
 **/out/*
 **/.next/*
+*.scss
+.eslintrc.js
+*.tsx

@@ -1,11 +1,9 @@
 import React from 'react';
 
-function Blogs(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+function Blogs() {
+  return (
+    <div />
+  );
 }
 
 export default Blogs;

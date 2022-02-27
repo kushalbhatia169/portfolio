@@ -17,15 +17,15 @@ export async function getStaticProps() {
 
 interface contentProps {
     content: {
-        label: String,
-        heading: String,
-        listData: String,
+        label: string,
+        heading: string,
+        listData: string,
     }[]
 };
 
 interface SkillsProps extends contentProps {
-    heading: String,
-    about: String,
+    heading: string,
+    about: string,
     // content: contentProps[],
     // content: Array<contentProps>,
 };
