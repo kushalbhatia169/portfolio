@@ -2,6 +2,7 @@
     .intro {
         width: 100%;
         margin-top: 20px;
+        transition: all 0.5s ease;
         &__image {
             margin-top: 70px;
             opacity: 1;
@@ -189,7 +190,7 @@
             width: 15%;
             text-align: center;
             margin:40px;
-
+            
             h5 {
                 margin-top: 30px;
                 font-weight: 700;
@@ -199,8 +200,11 @@
             &:hover {
                 background-color: #000000;
                 color: #fff;
+                font-size: large;
                 h5 {
                     color: #fff;
+                    transition: font-size ease 0.5s;
+                    font-size: 1.5rem;
                 }
 
                 div {

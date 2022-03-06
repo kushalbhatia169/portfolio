@@ -18,7 +18,7 @@ const services = () => {
                 <div className={styles.services__item + " d-flex flex-column align-items-center justify-content-center"}>
                     <div>
                         <CgWebsite size={54} />
-                        <h5>UI Responsive Web Designs</h5>
+                        <h5>Responsive Web Design</h5>
                     </div>
                 </div>
                 <div className={styles.services__item + " d-flex flex-column align-items-center justify-content-center"}>
@@ -36,13 +36,13 @@ const services = () => {
                 <div className={styles.services__item + " d-flex flex-column align-items-center justify-content-center"}>
                     <div>
                         <FaNode size={54} />
-                        <h5>Backup Development Of Application</h5>
+                        <h5>Backend Development</h5>
                     </div>
                 </div>
                 <div className={styles.services__item + " d-flex flex-column align-items-center justify-content-center"}>
                     <div>
                         <FaAws size={54} />
-                        <h5>Deployment Of Applications</h5>
+                        <h5>Deployments</h5>
                     </div>
                 </div>
             </div>
