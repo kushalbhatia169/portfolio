@@ -36,3 +36,39 @@ a {
     border-color: #000;
   }
 }
+
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  color: #1a1a1a;
+  box-shadow: 9984px 0 0 0 #1a1a1a, 9999px 0 0 0 #1a1a1a, 10014px 0 0 0 #1a1a1a;
+  animation: dotTyping 1.5s infinite linear;
+}
+
+@keyframes dotTyping {
+  0% {
+    box-shadow: 9984px 0 0 0 #1a1a1a, 9999px 0 0 0 #1a1a1a, 10014px 0 0 0 #1a1a1a;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 #1a1a1a, 9999px 0 0 0 #1a1a1a, 10014px 0 0 0 #1a1a1a;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #1a1a1a, 9999px 0 0 0 #1a1a1a, 10014px 0 0 0 #1a1a1a;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #1a1a1a, 9999px -10px 0 0 #1a1a1a, 10014px 0 0 0 #1a1a1a;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #1a1a1a, 9999px 0 0 0 #1a1a1a, 10014px 0 0 0 #1a1a1a;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #1a1a1a, 9999px 0 0 0 #1a1a1a, 10014px -10px 0 0 #1a1a1a;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #1a1a1a, 9999px 0 0 0 #1a1a1a, 10014px 0 0 0 #1a1a1a;
+  }
+}

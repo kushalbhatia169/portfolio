@@ -2,7 +2,7 @@
 import { FaReact, FaJs, FaNode, FaDatabase, FaGit, FaSass, FaBitbucket, FaSmile } from "react-icons/fa";
 
 
-export const showIcon = (section: String): JSX.Element => {
+export const showIcon = (section: string): JSX.Element => {
     switch (section) {
         case 'Java Script':
             return <FaJs size={40} />;

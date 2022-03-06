@@ -1,0 +1,12 @@
+.layout {
+    $self: &;
+    background-color: #f9f9fc;
+    width: 100%;
+    min-height: 100vh;
+
+    &__menu {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgb(0 0 0 / 8%);
+        color: #7E7E7E;
+    }
+}

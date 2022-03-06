@@ -1,42 +1,26 @@
 import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Box } from '@mui/material';
-import { Footer } from 'antd/lib/layout/layout';
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedinIn,
-  FaGithub,
-} from 'react-icons/fa';
+import styles from './layout.module.scss';
 
-function Layout({ children, page }) {
+function Layout({ children }) {
   return (
-    <Box style={{ minHeight: 1000 }}>
-      <Box className="d-flex m-4 p-4 justify-content-between">
-        <h4>{(page === 'first' && 'Welcome to My Portfolio...') || 'My Portfolio...'}</h4>
-        <MenuIcon fontSize="large" className="cursor-pointer" />
-      </Box>
+    <div className={styles.layout}>
+      <div className={'d-flex flex-wrap justify-content-between w-100 p-4 ' + styles.layout__menu}>
+        <div className="d-flex">
+          <h3>Welcome</h3>
+          <div className="ms-3 mt-3 col-3">
+            <div className="snippet mt-1" data-title=".dot-typing">
+              <div className="stage">
+                <div className="dot-typing"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <MenuIcon fontSize="large" />
+      </div>
       {children}
-      <Footer className="p-5 d-flex justify-content-between flex-wrap">
-        <Box className="ps-5">
-          © Copyright MyPortfolio. All Rights Reserved
-        </Box>
-        <Box className="d-flex flex-wrap justify-content-evenly me-4">
-          <a className="ms-2 me-2" href="https://www.facebook.com/kushalbhatia169" role="link">
-            <FaFacebook size={30} className="cursor-pointer" />
-          </a>
-          <a className="ms-2 me-2" href="https://twitter.com/ku_bhatia">
-            <FaTwitter size={30} className="cursor-pointer" />
-          </a>
-          <a className="ms-2 me-2" href="https://www.linkedin.com/in/kushal-bhatia-28061996/">
-            <FaLinkedinIn size={30} className="cursor-pointer" />
-          </a>
-          <a className="ms-2 me-2" href="https://github.com/kushalbhatia169">
-            <FaGithub size={30} className="cursor-pointer" />
-          </a>
-        </Box>
-      </Footer>
-    </Box>
+    </div>
   );
 }
 
