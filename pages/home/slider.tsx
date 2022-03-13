@@ -83,8 +83,8 @@ const Card = ({ onClick, image, link, title }: cardProps) => {
         {`
                 .card {
                     margin: 50px;
-                    width: 333px;
-                    height: 333px;
+                    width: 250px;
+                    height: 250px;
                     border-radius: 10%; 
                     cursor: pointer;
                 }
@@ -95,7 +95,7 @@ const Card = ({ onClick, image, link, title }: cardProps) => {
                     }   
                 }
                 .card_content {
-                    width: 333px;
+                    width: 250px;
                     margin-left: 50px;
                     display: flex;
                     flex-direction: column;
@@ -104,14 +104,14 @@ const Card = ({ onClick, image, link, title }: cardProps) => {
                 .project_image {
                     background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url('${image.src}');
                     background-size: cover;
-                    width: 333px;
-                    height: 333px;
+                    width: 250px;
+                    height: 250px;
                     border-radius: 10%;
                 }
 
                 .project_image:hover, .card:hover {
-                    width: 400px;
-                    height: 400px;
+                    width: 350px;
+                    height: 350px;
                     border: 1px solid goldenrod;
                     -webkit-transition: all .3s ease;
                     -moz-transition: all .3s ease;
@@ -120,7 +120,7 @@ const Card = ({ onClick, image, link, title }: cardProps) => {
                     transition: all .3s ease;
                 }
                 span {
-                    font-size: 20px;
+                    font-size: 17px;
                     display: inline-block;
                 }
                 del {
@@ -140,7 +140,7 @@ const Card = ({ onClick, image, link, title }: cardProps) => {
                 a::before, .strike-p::before {
                     position: relative;
                     content: ".";
-                    font-size: 40px;
+                    font-size: 28px;
                     top: -3px;
                     color: #7e7e7e;
                     padding: 0px 5px;
@@ -148,7 +148,7 @@ const Card = ({ onClick, image, link, title }: cardProps) => {
                 h3 {
                     text-decoration: none;
                     color: #34495E;
-                    font-size: 36px;
+                    font-size: 28px;
                     font-weight: 700;
                     -webkit-transition: all .3s ease;
                     -moz-transition: all .3s ease;

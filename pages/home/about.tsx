@@ -14,7 +14,7 @@ class About extends PureComponent {
         <div className={styles.about__container}>
           <div className={styles.about__text_div}>
             <div className={styles.about__info}>
-              <h3>Hi, I&apos;m Kushal Bhatia</h3>
+              <h4>Hi, I&apos;m Kushal Bhatia</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Mauris ipsum sit nibh amet egestas tellus. Eu leo morbi massa
@@ -22,7 +22,7 @@ class About extends PureComponent {
               </p>
             </div>
             <div className={styles.about__info}>
-              <h3>What is my skill level?</h3>
+              <h4>What is my skill level?</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Mauris ipsum sit nibh amet egestas tellus. Eu leo morbi massa
