@@ -111,6 +111,11 @@
                 font-size: 40px;
                 font-weight: 800;
                 margin-bottom: 10px;
+                @media screen and (max-width: 768px) {
+                    padding: 13px;
+                    // padding-bottom: 0;
+                    // padding-top: 0;
+                }
             }
             p {
                 font-size: 1rem;
