@@ -61,9 +61,20 @@ interface propsProgressBar {
 const ProgressBar = (props: propsProgressBar) => {
   const { skill, level } = props;
   return (<div className={styles.about__progress_content}> <span>{skill}</span>
-    <div className="progress mt-2" style={{ border: '1px solid #7e7e7e', padding: '2px' }}>
-      <div className="progress-bar" role="progressbar" title={level}
-        style={{ width: level, backgroundColor: '#34495e' }}>
+    <style jsx>
+      {`
+      .progress {
+        border: 1px solid #7e7e7e;
+        padding: 2px;
+      }
+      .progress-bar {
+        width: ${level};
+        background-color: #34495e;
+      }
+    `}
+    </style>
+    <div className="progress mt-2">
+      <div className="progress-bar" role="progressbar" title={level}>
       </div>
     </div> </div>
   );

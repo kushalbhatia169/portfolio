@@ -10,7 +10,7 @@ import {
 const introduction = () => {
 
   return (
-    <div className={"d-flex flex-wrap align-items-center flex-column  " + styles.intro}>
+    <div className={'d-flex flex-wrap align-items-center flex-column  ' + styles.intro}>
       <div className={styles.intro__image}>
         <div className={styles.main} data-img-url="../../public/images/profile.jpg">
         </div>

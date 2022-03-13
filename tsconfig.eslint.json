@@ -5,7 +5,8 @@
   ],
   "rules": [
     {
-      "no-reserved-keys": 0
+      "no-reserved-keys": 0,
+      "@typescript-eslint/no-unused-vars": "off"
     }
   ]
 }

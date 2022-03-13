@@ -4,15 +4,17 @@ import About from './about';
 import styles from './home.module.scss';
 import Layout from '../../components/layout';
 import Services from './services';
+import Projects from './projects';
 
 const index = () => {
-  console.log(styles);
+
   return (
     <div className={styles.home}>
       <Layout>
         <Introduction />
         <About />
         <Services />
+        <Projects />
       </Layout>
     </div>
   );

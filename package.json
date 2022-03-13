@@ -23,6 +23,7 @@
     "prettier": "^2.5.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-horizontal-scrolling-menu": "^2.7.1",
     "react-html-parser": "^2.0.2",
     "react-icons": "^4.3.1",
     "react-swipeable": "^6.2.0",
