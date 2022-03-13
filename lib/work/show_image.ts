@@ -3,7 +3,7 @@ import epson from '../../public/images/epson-logo.png';
 import chat from '../../public/images/chat.png';
 import exam from '../../public/images/exam.png';
 
-type imgNameProps = (imgName: String) => StaticImageData;
+type imgNameProps = (imgName: string) => StaticImageData;
 
 export const showImage: imgNameProps = (imgName) => {
     switch (imgName) {
