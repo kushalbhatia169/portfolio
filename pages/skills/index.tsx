@@ -16,22 +16,22 @@ export async function getStaticProps() {
 }
 
 interface contentProps {
-    content: {
-        label: string,
-        heading: string,
-        listData: string,
-    }[],
+  content: {
+    label: string,
+    heading: string,
+    listData: string,
+  }[],
 }
 
 interface SkillsProps extends contentProps {
-    heading: string,
-    about: string,
-    // content: contentProps[],
-    // content: Array<contentProps>,
+  heading: string,
+  about: string,
+  // content: contentProps[],
+  // content: Array<contentProps>,
 }
 
 interface Props {
-    skillsData: SkillsProps
+  skillsData: SkillsProps
 }
 
 const Skills: React.FC<Props> = (props) => {
@@ -40,7 +40,7 @@ const Skills: React.FC<Props> = (props) => {
   const { heading, about, content } = skillsData || {};
 
   return (
-    <Layout page="">
+    <Layout>
       <Box className={styles.skills_main}>
         <Box className="d-flex flex-column align-items-center flex-wrap">
           <style jsx>{`

@@ -8,6 +8,7 @@ import { Pagination } from 'antd';
 import { getWorkData } from '../../lib/work/work';
 import { showImage } from '../../lib/work/show_image';
 import ReactHtmlParser from 'react-html-parser';
+import { useRouter } from 'next/router';
 
 export const getStaticProps = async () => {
   const workData = await getWorkData();
@@ -35,7 +36,8 @@ interface workProps {
 }
 
 const work: React.FC<workProps> = (props) => {
-  const [currentPage, setCurrentPage] = React.useState(0);
+  const { id }: any = useRouter()?.query || {};
+  const [currentPage, setCurrentPage] = React.useState(parseInt(id) || 0);
   const [content] = React.useState(props?.workData?.content);
   // const [totalPage] = React.useState(content?.length);
   const changeProject = (e: number): void => {
@@ -44,7 +46,7 @@ const work: React.FC<workProps> = (props) => {
   };
 
   return (
-    <Layout page="">
+    <Layout>
       <div className={styles.work_main}>
         {content && <div className={'d-flex flex-wrap ms-5 mt-3 ' + styles.work_main__office}>
           <div className={styles.work_main__UHRO}>
@@ -81,8 +83,8 @@ const work: React.FC<workProps> = (props) => {
           </div>
         </div>}
       </div>
-      <div className={'d-flex mt-4 mb-3 justify-content-center ' + styles.work_pagination}>
-        <Pagination size="small" total={4} responsive={true} simple={true}
+      <div className={'d-flex mt-4 justify-content-center ' + styles.work_pagination}>
+        <Pagination size="small" total={4} responsive={true} simple={true} defaultCurrent={currentPage + 1}
           defaultPageSize={1} onChange={changeProject} />
       </div>
     </Layout>
