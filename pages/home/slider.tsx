@@ -76,7 +76,6 @@ const Card = ({ onClick, image, link, title }: cardProps) => {
 
   return (
     <div
-      onClick={() => onClick(visibility)}
       tabIndex={0}
     >
       <style jsx>
@@ -159,7 +158,7 @@ const Card = ({ onClick, image, link, title }: cardProps) => {
 
             `}
       </style>
-      <div className="card">
+      <div className="card" onClick={() => onClick(visibility)}>
         <div className="project_image" />
       </div>
       <div className="card_content">
